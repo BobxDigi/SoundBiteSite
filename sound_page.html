@@ -1,0 +1,108 @@
+<!-- 
+    Author: J. Johnson II
+    File: sound_page.html
+    Description: Simple page that plays a sound when the user clicks a button.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding -->
+    <meta charset="UTF-8">
+    <!-- Set page title -->
+    <title>Sound Assignment - Simple Player</title>
+
+    <!-- Simple CSS styles for creative look -->
+    <style>
+        /* Set background color and base font */
+        body {
+            background-color: #101722;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Main content box styling */
+        #mainBox {
+            background-color: #1e2733;
+            border: 1px solid #444444;
+            border-radius: 10px;
+            width: 420px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        /* Style for heading text */
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the logo image (creative element) */
+        #mirrorLogo {
+            width: 120px;
+            margin-bottom: 15px;
+        }
+
+        /* Style for the control buttons */
+        .soundButton {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Play button color */
+        #playBtn {
+            background-color: #00a86b;
+            color: #ffffff;
+        }
+
+        /* Pause button color */
+        #pauseBtn {
+            background-color: #cc3333;
+            color: #ffffff;
+        }
+
+        /* Text area for status messages */
+        #statusText {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main centered box -->
+    <div id="mainBox">
+        <!-- Mirror style logo image (creative element) -->
+        <img id="mirrorLogo" src="mirror_logo.jpg" alt="Mirror Logo">
+
+        <!-- Page heading -->
+        <h2>Simple Sound Player</h2>
+
+        <!-- Small description for the user -->
+        <p>Click play to hear the UFO takeoff sound. Click pause to stop it.</p>
+
+        <!-- Audio element that holds the sound file -->
+        <audio id="ufoSound">
+            <!-- Source of the MP3 sound file -->
+            <source src="ufo_sound.mp3" type="audio/mpeg">
+            <!-- Fallback message if audio is not supported -->
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Buttons for user to control the sound (no inline JS here) -->
+        <button id="playBtn" class="soundButton" type="button">Play Sound</button>
+        <button id="pauseBtn" class="soundButton" type="button">Pause Sound</button>
+
+        <!-- Status text that will be updated with innerHTML in JavaScript -->
+        <div id="statusText">Sound is stopped.</div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="sound_page.js"></script>
+</body>
+</html>
